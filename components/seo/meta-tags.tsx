@@ -12,7 +12,7 @@ interface MetaTagsProps {
 export default function MetaTags({
   title = "Akbarkhoja – Frontend Developer Blogs",
   description = "Crafting beautiful, interactive experiences with modern web technologies. Passionate about clean code and innovative design.",
-  image = "../../public/me.jpg",
+  image = "/me.jpg",
   url = "https://akbarkhoja-blogs.vercel.app",
   type = "website",
   keywords = [
@@ -33,7 +33,7 @@ export default function MetaTags({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(", ")} />
-      <meta name="author" content="Your Name" />
+      <meta name="author" content="Akbarkhoja" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={url} />
 
@@ -58,7 +58,7 @@ export default function MetaTags({
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="theme-color" content="#8B5CF6" />
-      <link rel="icon" href="@/public/me.jpg" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       {/* Structured Data */}
