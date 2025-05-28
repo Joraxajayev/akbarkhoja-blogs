@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
@@ -34,18 +34,20 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg?height=60&width=60",
   },
-]
+];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   return (
     <section className="py-20 px-4">
@@ -56,8 +58,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             What Clients Say
           </motion.h2>
           <motion.p
@@ -65,9 +66,9 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Don't just take my word for it. Here's what some of my clients have to say about working with me.
+            viewport={{ once: true }}>
+            Don't just take my word for it. Here's what some of my clients have
+            to say about working with me.
           </motion.p>
         </div>
 
@@ -78,8 +79,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-            >
+              transition={{ duration: 0.5 }}>
               <Card className="backdrop-blur-xl bg-white/10 border-white/20">
                 <CardContent className="p-8 md:p-12">
                   <div className="flex justify-center mb-6">
@@ -92,22 +92,32 @@ export default function Testimonials() {
 
                   <div className="flex justify-center mb-6">
                     <div className="flex space-x-1">
-                      {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[...Array(testimonials[currentIndex].rating)].map(
+                        (_, i) => (
+                          <Star
+                            key={i}
+                            className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                          />
+                        )
+                      )}
                     </div>
                   </div>
 
                   <div className="flex items-center justify-center space-x-4">
                     <img
-                      src={testimonials[currentIndex].avatar || "/placeholder.svg"}
+                      src={
+                        testimonials[currentIndex].avatar || "/placeholder.svg"
+                      }
                       alt={testimonials[currentIndex].name}
                       className="w-12 h-12 rounded-full border-2 border-white/20"
                     />
                     <div className="text-center">
-                      <h4 className="text-white font-semibold">{testimonials[currentIndex].name}</h4>
+                      <h4 className="text-white font-semibold">
+                        {testimonials[currentIndex].name}
+                      </h4>
                       <p className="text-white/60 text-sm">
-                        {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
+                        {testimonials[currentIndex].role} at{" "}
+                        {testimonials[currentIndex].company}
                       </p>
                     </div>
                   </div>
@@ -122,16 +132,14 @@ export default function Testimonials() {
               variant="ghost"
               size="sm"
               onClick={prevTestimonial}
-              className="text-white/70 hover:text-white hover:bg-white/10"
-            >
+              className="text-white/70 hover:text-white hover:bg-white/10">
               <ChevronLeft className="w-5 h-5" />
             </Button>
             <Button
               variant="ghost"
               size="sm"
               onClick={nextTestimonial}
-              className="text-white/70 hover:text-white hover:bg-white/10"
-            >
+              className="text-white/70 hover:text-white hover:bg-white/10">
               <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
@@ -151,5 +159,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

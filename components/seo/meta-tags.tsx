@@ -12,8 +12,8 @@ interface MetaTagsProps {
 export default function MetaTags({
   title = "Frontend Developer Portfolio",
   description = "Crafting beautiful, interactive experiences with modern web technologies. Passionate about clean code and innovative design.",
-  image = "/og-image.jpg",
-  url = "https://akbarkhoja.dev",
+  image = "@/public/me.jpg",
+  url = "https://akbarkhoja-blogs.vercel.app",
   type = "website",
   keywords = ["frontend developer", "web developer", "react", "nextjs", "typescript"],
 }: MetaTagsProps) {
