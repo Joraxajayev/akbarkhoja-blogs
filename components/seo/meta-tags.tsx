@@ -12,7 +12,7 @@ interface MetaTagsProps {
 export default function MetaTags({
   title = "Akbarkhoja – Frontend Developer Blogs",
   description = "Crafting beautiful, interactive experiences with modern web technologies. Passionate about clean code and innovative design.",
-  image = "@/public/me.jpg",
+  image = "../../public/me.jpg",
   url = "https://akbarkhoja-blogs.vercel.app",
   type = "website",
   keywords = [
@@ -25,7 +25,7 @@ export default function MetaTags({
 }: MetaTagsProps) {
   const fullTitle = title.includes("Portfolio")
     ? title
-    : `${title} | Frontend Developer Portfolio`;
+    : `${title} | Akbarkhoja – Frontend Developer Blogs`;
 
   return (
     <Head>
@@ -43,14 +43,17 @@ export default function MetaTags({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Frontend Developer Portfolio" />
+      <meta
+        property="og:site_name"
+        content="Akbarkhoja – Frontend Developer Blogs"
+      />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@yourusername" />
+      <meta name="twitter:creator" content="@akbarxojaZ" />
 
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
