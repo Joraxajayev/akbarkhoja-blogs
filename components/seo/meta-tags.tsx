@@ -1,23 +1,31 @@
-import Head from "next/head"
+import Head from "next/head";
 
 interface MetaTagsProps {
-  title?: string
-  description?: string
-  image?: string
-  url?: string
-  type?: string
-  keywords?: string[]
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  keywords?: string[];
 }
 
 export default function MetaTags({
-  title = "Frontend Developer Portfolio",
+  title = "Akbarkhoja – Frontend Developer Blogs",
   description = "Crafting beautiful, interactive experiences with modern web technologies. Passionate about clean code and innovative design.",
   image = "@/public/me.jpg",
   url = "https://akbarkhoja-blogs.vercel.app",
   type = "website",
-  keywords = ["frontend developer", "web developer", "react", "nextjs", "typescript"],
+  keywords = [
+    "frontend developer",
+    "web developer",
+    "react",
+    "nextjs",
+    "typescript",
+  ],
 }: MetaTagsProps) {
-  const fullTitle = title.includes("Portfolio") ? title : `${title} | Frontend Developer Portfolio`
+  const fullTitle = title.includes("Portfolio")
+    ? title
+    : `${title} | Frontend Developer Portfolio`;
 
   return (
     <Head>
@@ -47,7 +55,7 @@ export default function MetaTags({
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="theme-color" content="#8B5CF6" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="@/public/me.jpg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       {/* Structured Data */}
@@ -71,5 +79,5 @@ export default function MetaTags({
         }}
       />
     </Head>
-  )
+  );
 }
