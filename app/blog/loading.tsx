@@ -14,20 +14,6 @@ export default function Loading() {
           <Skeleton className="h-6 w-full max-w-xl mx-auto bg-white/10" />
         </div>
 
-        {/* Stats Skeleton */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <Card key={i} className="backdrop-blur-xl bg-white/10 border-white/20">
-                <CardContent className="p-6 text-center">
-                  <Skeleton className="h-10 w-16 mx-auto mb-2 bg-white/10" />
-                  <Skeleton className="h-5 w-32 mx-auto bg-white/10" />
-                </CardContent>
-              </Card>
-            ))}
-        </div>
-
         {/* Filters Skeleton */}
         <div className="mb-12">
           <Card className="backdrop-blur-xl bg-white/10 border-white/20">
@@ -40,12 +26,7 @@ export default function Loading() {
           </Card>
         </div>
 
-        {/* Featured Projects Header Skeleton */}
-        <div className="text-center mb-8">
-          <Skeleton className="h-10 w-64 mx-auto bg-white/10" />
-        </div>
-
-        {/* Projects Grid Skeleton */}
+        {/* Blog Posts Grid Skeleton */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Array(6)
             .fill(0)
@@ -54,6 +35,10 @@ export default function Loading() {
                 <CardContent className="p-0">
                   <Skeleton className="w-full h-64 rounded-t-lg bg-white/10" />
                   <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Skeleton className="h-4 w-4 rounded-full bg-white/10" />
+                      <Skeleton className="h-4 w-32 bg-white/10" />
+                    </div>
                     <Skeleton className="h-7 w-3/4 mb-3 bg-white/10" />
                     <Skeleton className="h-4 w-full mb-2 bg-white/10" />
                     <Skeleton className="h-4 w-full mb-2 bg-white/10" />
@@ -62,12 +47,8 @@ export default function Loading() {
                       <Skeleton className="h-6 w-16 rounded-full bg-white/10" />
                       <Skeleton className="h-6 w-20 rounded-full bg-white/10" />
                       <Skeleton className="h-6 w-12 rounded-full bg-white/10" />
-                      <Skeleton className="h-6 w-14 rounded-full bg-white/10" />
                     </div>
-                    <div className="flex gap-3">
-                      <Skeleton className="h-9 flex-1 bg-white/10" />
-                      <Skeleton className="h-9 w-9 bg-white/10" />
-                    </div>
+                    <Skeleton className="h-8 w-28 bg-white/10" />
                   </div>
                 </CardContent>
               </Card>
